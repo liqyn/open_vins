@@ -134,6 +134,9 @@ if (catkin_FOUND AND ENABLE_ROS)
 
 endif ()
 
+add_executable(run_euroc_asl src/run_euroc_asl.cpp)
+target_link_libraries(run_euroc_asl ov_msckf_lib ${thirdparty_libraries})
+
 add_executable(run_simulation src/run_simulation.cpp)
 target_link_libraries(run_simulation ov_msckf_lib ${thirdparty_libraries})
 install(TARGETS run_simulation
